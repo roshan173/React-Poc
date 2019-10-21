@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
 import CourseDataService from './CourseDataService';
-import axios from 'axios';
 
 class ListCoursesComponent extends Component{
 
@@ -15,11 +14,12 @@ class ListCoursesComponent extends Component{
   }
 
   refreshCourses() {
-    fetch('http://localhost:8080/instructors/roshan/courses').then(
-      response => {
-        console.log("ad");
-      }
-    );
+    CourseDataService.retrieveAllCourses('INSTRUCTOR')
+      .then(
+          response => {
+            console.log(response);
+          }
+      )
   }
   render(){return(<div></div>)}
   // render() {
