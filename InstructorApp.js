@@ -4,7 +4,7 @@ class InstructorApp extends Component {
   render() {
     return(
       <div>
-        <h1>Instructor App</h1>
+        <h1>Instructor Application</h1>
       </div>
     )
   }
